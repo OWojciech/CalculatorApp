@@ -101,9 +101,9 @@ public class OldCalcBuilder implements CalcBuilder {
 				break;
 
 			default:
-				try{
-					Byte.parseByte(bc);
-				}catch(NumberFormatException nfe){
+				if((bc.trim().charAt(0)) > 47 && (bc.trim().charAt(0)) < 58){
+					b.setBackground(Color.WHITE);
+				}else{
 					b.setBackground(Color.ORANGE);
 				}
 				
